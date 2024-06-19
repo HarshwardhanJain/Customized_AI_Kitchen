@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Dish</title>
+</head>
+<body>
+    <h1>Select a Dish</h1>
+    <form action="{{ url_for('select_dish') }}" method="post">
+        <label for="dish">Choose a dish:</label>
+        <select name="dish" id="dish">
+            {% for dish in dishes %}
+                <option value="{{ loop.index }}">{{ dish }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <label for="num_people">Number of people:</label>
+        <input type="number" name="num_people" id="num_people" min="1" required>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
