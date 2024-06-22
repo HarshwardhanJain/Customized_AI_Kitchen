@@ -17,7 +17,7 @@ class_names = ["asafoetida", "brown rice", "butter", "cabbage", "capsicum", "car
                "saffron strands", "sugar", "sunflower oil", "tamarind", "tea leaves", "tomato", "turmeric powder",
                "white lentils", "yellow corn meal flour"]
 
-UPLOAD_FOLDER = '/Intel Project/Intel_Customized_AI_Kitchen/static/uploaded_images'
+UPLOAD_FOLDER = 'static/uploaded_images'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 AIKitchen.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 AIKitchen.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg'}

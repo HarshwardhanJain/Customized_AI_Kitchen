@@ -36,10 +36,6 @@ pip install -r requirements.txt
 1. Ensure you have **Custom_Image_Classification_Trained_Model.h5**.
 2. Place it in the directory **Customized_AI_Kitchen/**.
 
-### Create Necessary Directories
-```sh
-mkdir -p Intel_Project/Intel_Customized_AI_Kitchen/static/uploaded_images
-```
 
 ## Running the Application
 
