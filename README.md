@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 ### Run the Flask Application
 ```sh
-python Customized_AI_Kitchen/AIKitchen.py
+python AIKitchen.py
 ```
 * **Access the application at http://127.0.0.1:5000/.**
 
