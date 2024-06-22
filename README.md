@@ -30,11 +30,11 @@ pip install -r requirements.txt
 
 **1. Custom_Recipe_Dataset.csv:**
 1. Ensure you have **Custom_Recipe_Dataset.csv**.
-2. Place it in the directory **Intel_Project/Intel_Customized_AI_Kitchen/**.
+2. Place it in the directory **Customized_AI_Kitchen/**.
 
 **2. Custom_Image_Classification_Trained_Model.h5:**
 1. Ensure you have **Custom_Image_Classification_Trained_Model.h5**.
-2. Place it in the directory **Intel_Project/Intel_Customized_AI_Kitchen/**.
+2. Place it in the directory **Customized_AI_Kitchen/**.
 
 ### Create Necessary Directories
 ```sh

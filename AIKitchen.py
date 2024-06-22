@@ -41,7 +41,7 @@ def check_ingredients(predictions_list, ingredient_names):
     return available_ingredients, len(available_ingredients) == len(ingredient_names)
 
 
-file_path = '/Intel Project/Intel_Customized_AI_Kitchen/Custom_Recipe_Dataset.csv'
+file_path = 'Custom_Recipe_Dataset.csv'
 
 try:
     df = pd.read_csv(file_path, encoding='latin1')
@@ -133,7 +133,7 @@ def classify_images():
     ingredient_names = [ingredient[0] for ingredient in multiplied_ingredients]
 
     cnn = tf.keras.models.load_model(
-        '/Intel Project/Intel_Customized_AI_Kitchen/Custom_Image_Classification_Trained_Model.h5')
+        'Custom_Image_Classification_Trained_Model.h5')
 
     input_folder = AIKitchen.config['UPLOAD_FOLDER']
     predictions_list = []
