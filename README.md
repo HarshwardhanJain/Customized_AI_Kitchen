@@ -45,7 +45,7 @@ mkdir -p Intel_Project/Intel_Customized_AI_Kitchen/static/uploaded_images
 
 ### Run the Flask Application
 ```sh
-python AIKitchen.py
+python Customized_AI_Kitchen/AIKitchen.py
 ```
 * **Access the application at http://127.0.0.1:5000/.**
 
