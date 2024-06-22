@@ -51,12 +51,8 @@ python AIKitchen.py
 ```
 Customized_AI_Kitchen/
 │
-├── Intel_Project/
-│   └── Intel_Customized_AI_Kitchen/
-│       ├── static/
-│       │   └── uploaded_images/
-│       ├── Custom_Recipe_Dataset.csv
-│       └── Custom_Image_Classification_Trained_Model.h5
+├── static/
+│   └── uploaded_images/
 │
 ├── templates/
 │   ├── index.html
@@ -65,6 +61,8 @@ Customized_AI_Kitchen/
 │   ├── recipe.html
 │   └── missing.html
 │
+├── Custom_Recipe_Dataset.csv
+├── Custom_Image_Classification_Trained_Model.h5
 ├── AIKitchen.py
 ├── requirements.txt
 └── README.md
