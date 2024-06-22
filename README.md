@@ -19,10 +19,8 @@ git clone https://github.com/HarshwardhanJain/Customized_AI_Kitchen.git
 cd Customized_AI_Kitchen
 ```
 
-### Create a Virtual Environment and Install Dependencies
+### Install Dependencies
 ```sh
-python3 -m venv env
-source env/bin/activate
 pip install -r requirements.txt
 ```
 
