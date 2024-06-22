@@ -1,9 +1,64 @@
 # Customized_AI_Kitchen
 
+
 ### Intel Project
+
 
 ## Overview
 Customized_AI_Kitchen is a Flask-based web application that helps users identify ingredients in uploaded images and adjust recipe quantities based on the number of servings. The application uses a pre-trained TensorFlow model for image classification and processes recipes from a CSV dataset.
+
+
+## Download Our Custom Dataset
+[Custom Database](https://drive.google.com/drive/folders/117V_iMwkIQCNcPX7LwF8stYoXaYZA8bv?usp=drive_link)
+
+### Dataset Overview
+Our custom dataset consists of images categorized into 36 distinct classes. These classes represent various ingredients commonly used in cooking. The class names include:
+
+- Asafoetida
+- Brown rice
+- Butter
+- Cabbage
+- Capsicum
+- Cardamom powder
+- Carom seeds
+- Carrot
+- Coriander leaves
+- Curry leaves
+- Dry red chili
+- Eggplant
+- Fenugreek leaves
+- Fenugreek seeds
+- Garlic
+- Ginger
+- Green chili
+- Jaggery
+- Lemon
+- Mango
+- Milk
+- Mustard seeds
+- Onion
+- Raw mango
+- Red chili powder
+- Ridge gourd skin
+- Rosemary
+- Saffron strands
+- Sugar
+- Sunflower oil
+- Tamarind
+- Tea leaves
+- Tomato
+- Turmeric powder
+- White lentils
+- Yellow corn meal flour
+
+The dataset is organized into three main directories:
+
+1. **Train**: Contains images used for training the model.
+2. **Test**: Contains images used for testing the model's performance.
+3. **Validation**: Contains images used for validating the model during training to prevent overfitting.
+
+This well-structured dataset ensures comprehensive coverage of each class, enabling robust training and accurate classification by the model.
+
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -68,5 +123,5 @@ Customized_AI_Kitchen/
 └── README.md
 ```
 
-## Notes
+## Note
 * **Ensure all file paths are correct.**
