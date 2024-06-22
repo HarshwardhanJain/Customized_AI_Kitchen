@@ -77,6 +77,13 @@ def action():
     return render_template('action.html')
 
 
+def clear_upload_folder():
+    for filename in os.listdir(AIKitchen.config['UPLOAD_FOLDER']):
+        file_path = os.path.join(AIKitchen.config['UPLOAD_FOLDER'], filename)
+        if os.path.isfile(file_path):
+            os.remove(file_path)
+
+
 @AIKitchen.route('/upload', methods=['GET', 'POST'])
 def upload_files():
     if request.method == 'POST':
@@ -86,6 +93,8 @@ def upload_files():
         files = request.files.getlist('files')
         if not files:
             return jsonify({'message': 'No files uploaded'}), 400
+
+        clear_upload_folder()  # Clear the upload folder before saving new files
 
         for file in files:
             if file and allowed_file(file.filename):
