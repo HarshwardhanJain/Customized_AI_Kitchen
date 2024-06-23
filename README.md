@@ -77,12 +77,12 @@ cd Customized_AI_Kitchen
 ### Uninstall Dependencies
 * **To prevent conflicts between libraries, uninstall the following packages:**
 ```sh
-pip uninstall Flask
-pip uninstall pandas
-pip uninstall numpy
-pip uninstall tensorflow
-pip uninstall Werkzeug
-pip uninstall matplotlib
+pip uninstall -y Flask
+pip uninstall -y pandas
+pip uninstall -y numpy
+pip uninstall -y tensorflow
+pip uninstall -y Werkzeug
+pip uninstall -y matplotlib
 ```
 
 ### Install Dependencies
