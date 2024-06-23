@@ -135,4 +135,5 @@ Customized_AI_Kitchen/
 ```
 
 ## Note
+* **Ensure that the library versions are accurately installed and that the processes are carefully followed. If there are any errors, please refer to the tutorial video.**
 * **Ensure all file paths are correct.**
