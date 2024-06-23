@@ -74,6 +74,17 @@ git clone https://github.com/HarshwardhanJain/Customized_AI_Kitchen.git
 cd Customized_AI_Kitchen
 ```
 
+### Uninstall Dependencies
+* **To prevent conflicts between libraries, uninstall the following packages:**
+```sh
+pip uninstall Flask
+pip uninstall pandas
+pip uninstall numpy
+pip uninstall tensorflow
+pip uninstall Werkzeug
+pip uninstall matplotlib
+```
+
 ### Install Dependencies
 ```sh
 pip install -r requirements.txt
