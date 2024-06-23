@@ -10,6 +10,15 @@
     <form method="post" action="/upload" enctype="multipart/form-data">
         <input type="file" name="files" multiple required>
         <br><br>
+        <label>
+            <input type="radio" name="upload_option" value="replace" checked>
+            Replace Existing Images
+        </label>
+        <label>
+            <input type="radio" name="upload_option" value="add">
+            Add to Existing Images
+        </label>
+        <br><br>
         <input type="submit" value="Upload">
     </form>
 </body>

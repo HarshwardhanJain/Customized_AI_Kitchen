@@ -94,7 +94,10 @@ def upload_files():
         if not files:
             return jsonify({'message': 'No files uploaded'}), 400
 
-        clear_upload_folder()  # Clear the upload folder before saving new files
+        upload_option = request.form.get('upload_option')
+
+        if upload_option == 'replace':
+            clear_upload_folder()  # Clear the upload folder before saving new files
 
         for file in files:
             if file and allowed_file(file.filename):
