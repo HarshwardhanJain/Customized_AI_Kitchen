@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, url_for, session, jsonify
+from flask import Flask, request, render_template, redirect, url_for, session, jsonify, flash
 import os
 import pandas as pd
 import re
@@ -88,16 +88,18 @@ def clear_upload_folder():
 def upload_files():
     if request.method == 'POST':
         if 'files' not in request.files:
-            return jsonify({'message': 'No files part in the request'}), 400
+            flash('No files part in the request', 'danger')
+            return redirect(request.url)
 
         files = request.files.getlist('files')
         if not files:
-            return jsonify({'message': 'No files uploaded'}), 400
+            flash('No files uploaded', 'danger')
+            return redirect(request.url)
 
         upload_option = request.form.get('upload_option')
 
         if upload_option == 'replace':
-            clear_upload_folder()  # Clear the upload folder before saving new files
+            clear_upload_folder()
 
         for file in files:
             if file and allowed_file(file.filename):
@@ -105,6 +107,7 @@ def upload_files():
                 file_path = os.path.join(AIKitchen.config['UPLOAD_FOLDER'], filename)
                 file.save(file_path)
 
+        flash('Files successfully uploaded', 'success')
         return redirect(url_for('classify_images'))
     return render_template('upload.html')
 

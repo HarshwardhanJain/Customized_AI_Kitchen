@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Action</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
     <h1>Choose an Action</h1>
     <form method="post" action="/action">
-        <button type="submit" name="action" value="upload">Upload New Images</button>
-        <button type="submit" name="action" value="keep">Keep Current Images</button>
+        <button type="submit" name="action" value="upload" class="btn btn-secondary">Upload New Images</button>
+        <button type="submit" name="action" value="keep" class="btn btn-secondary">Keep Current Images</button>
     </form>
-</body>
-</html>
+{% endblock %}
