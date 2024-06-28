@@ -12,6 +12,13 @@
         .navbar {
             margin-bottom: 20px;
         }
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
         .image-grid {
             display: flex;
             flex-wrap: wrap;
@@ -75,9 +82,36 @@
             background-color: #f8f9fa;
             padding: 2rem 1rem;
         }
+
+        /* Background images */
+        .home-bg {
+            background-image: url('{{ url_for('static', filename='backgrounds/background1.jpg') }}');
+            background-size: cover;
+            background-position: center;
+        }
+        .index-bg {
+            background-image: url('{{ url_for('static', filename='backgrounds/background2.jpg') }}');
+            background-size: cover;
+            background-position: center;
+        }
+        .upload-bg {
+            background-image: url('{{ url_for('static', filename='backgrounds/background3.jpg') }}');
+            background-size: cover;
+            background-position: center;
+        }
+        .action-bg {
+            background-image: url('{{ url_for('static', filename='backgrounds/background4.jpg') }}');
+            background-size: cover;
+            background-position: center;
+        }
+        .result-bg {
+            background-image: url('{{ url_for('static', filename='backgrounds/background5.jpg') }}');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
-<body>
+<body class="{% block body_class %}{% endblock %}">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{ url_for('index') }}">AI Kitchen</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,17 +123,17 @@
                     <a class="nav-link" href="{{ url_for('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('index') }}">Select Dish</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('upload_files') }}">Upload Images</a>
+                    <a class="nav-link" href="{{ url_for('select_dish') }}">Select Dish</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('action') }}">Action</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('upload_images') }}">Upload Images</a>
+                </li>
             </ul>
         </div>
-    </nav>
+    </nav>    
     <div class="container">
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -112,7 +146,9 @@
                 </div>
             {% endif %}
         {% endwith %}
-        {% block content %}{% endblock %}
+        <div class="content-box">
+            {% block content %}{% endblock %}
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

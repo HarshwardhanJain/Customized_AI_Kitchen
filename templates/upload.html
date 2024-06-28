@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 class="mb-4">Upload Images</h1>
-    <form method="post" action="/upload" enctype="multipart/form-data">
-        <div class="form-group">
-            <input type="file" class="form-control-file" name="files" multiple required>
-        </div>
-        <div class="form-group">
-            <label>
-                <input type="radio" name="upload_option" value="replace" checked> Replace Existing Images
-            </label>
-            <label>
-                <input type="radio" name="upload_option" value="add"> Add to Existing Images
-            </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Upload</button>
-    </form>
+    <div class="content-box">
+        <h1 class="mb-4">Upload Images</h1>
+        <form method="post" action="/upload" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" class="form-control-file" name="files" multiple required>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="radio" name="upload_option" value="replace" checked> Replace Existing Images
+                </label>
+                <label>
+                    <input type="radio" name="upload_option" value="add"> Add to Existing Images
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
 {% endblock %}
+
+{% block body_class %}upload-bg{% endblock %}
