@@ -1,18 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 class="mb-4">Choose an Action</h1>
-    <form method="post" action="{{ url_for('action') }}">
-        <div class="form-group">
-            <label>
-                <input type="radio" name="action" value="upload" checked> Upload Images
-            </label>
-            <label>
-                <input type="radio" name="action" value="keep"> Keep Existing Images
-            </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <!-- Action Page -->
+    <div class="content-box">
+        <h1 class="mb-4">Choose an Action</h1>
+        <form method="post" action="{{ url_for('action') }}">
+            <div class="form-group">
+                <label>
+                    <input type="radio" name="action" value="upload" checked> Upload Images
+                </label>
+                <label>
+                    <input type="radio" name="action" value="keep"> Keep Existing Images
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 {% endblock %}
 
 {% block body_class %}action-bg{% endblock %}

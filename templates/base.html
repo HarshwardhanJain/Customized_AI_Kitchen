@@ -9,6 +9,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            font-size: 16px; /* Ensure same font size for all pages */
         }
         .navbar {
             margin-bottom: 20px;
@@ -87,27 +88,29 @@
         /* Background images */
         .home-bg {
             background-image: url('{{ url_for('static', filename='backgrounds/background1.jpg') }}');
-            background-size: cover;
-            background-position: center;
         }
         .index-bg {
             background-image: url('{{ url_for('static', filename='backgrounds/background2.jpg') }}');
-            background-size: cover;
-            background-position: center;
         }
         .upload-bg {
             background-image: url('{{ url_for('static', filename='backgrounds/background3.jpg') }}');
-            background-size: cover;
-            background-position: center;
         }
         .action-bg {
             background-image: url('{{ url_for('static', filename='backgrounds/background4.jpg') }}');
-            background-size: cover;
-            background-position: center;
         }
         .result-bg {
             background-image: url('{{ url_for('static', filename='backgrounds/background5.jpg') }}');
+        }
+
+        /* Background properties */
+        body.home-bg,
+        body.index-bg,
+        body.upload-bg,
+        body.action-bg,
+        body.result-bg {
             background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             background-position: center;
         }
     </style>

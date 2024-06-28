@@ -1,27 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Missing Ingredients</h2>
-    <ol>
-        {% for ingredient in missing_ingredients %}
-            <li>{{ ingredient }}</li>
-        {% endfor %}
-    </ol>
+    <!-- Missing Ingredients Page -->
+    <div class="jumbotron content-box">
+        <h2 class="mb-4">Missing Ingredients</h2>
+        <ol>
+            {% for ingredient in missing_ingredients %}
+                <li>{{ ingredient }}</li>
+            {% endfor %}
+        </ol>
 
-    <h2>Images with Predictions</h2>
-    <div class="image-grid">
-        {% for image_url, prediction in images_with_predictions %}
-            <div class="image-item">
-                <p>{{ prediction }}</p>
-                <img src="{{ image_url }}" alt="{{ prediction }}">
-            </div>
-        {% endfor %}
-    </div>
+        <h2 class="mb-4">Images with Predictions</h2>
+        <div class="image-grid">
+            {% for image_url, prediction in images_with_predictions %}
+                <div class="image-item">
+                    <p>{{ prediction }}</p>
+                    <img src="{{ image_url }}" alt="{{ prediction }}" class="img-fluid">
+                </div>
+            {% endfor %}
+        </div>
 
-    <div>
-        <a href="{{ url_for('index') }}">
-            <button class="btn btn-secondary">Back to Start</button>
-        </a>
+        <div class="mt-4">
+            <a href="{{ url_for('index') }}">
+                <button class="btn btn-secondary">Back to Start</button>
+            </a>
+        </div>
     </div>
 {% endblock %}
 
