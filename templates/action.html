@@ -1,9 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Choose an Action</h1>
-    <form method="post" action="/action">
-        <button type="submit" name="action" value="upload" class="btn btn-secondary">Upload New Images</button>
-        <button type="submit" name="action" value="keep" class="btn btn-secondary">Keep Current Images</button>
+    <h1 class="mb-4">Choose an Action</h1>
+    <form method="post" action="{{ url_for('action') }}">
+        <div class="form-group">
+            <label>
+                <input type="radio" name="action" value="upload" checked> Upload Images
+            </label>
+            <label>
+                <input type="radio" name="action" value="keep"> Keep Existing Images
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 {% endblock %}

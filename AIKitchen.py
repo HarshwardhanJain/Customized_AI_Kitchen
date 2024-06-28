@@ -50,6 +50,11 @@ except FileNotFoundError:
 
 
 @AIKitchen.route('/')
+def home():
+    return render_template('home.html')
+
+
+@AIKitchen.route('/index')
 def index():
     dishes = df['RecipeName'].tolist()
     return render_template('index.html', dishes=dishes)
@@ -147,8 +152,7 @@ def classify_images():
     ingredients_df = pd.DataFrame(multiplied_ingredients, columns=['Ingredient', 'Amount'])
     ingredient_names = [ingredient[0] for ingredient in multiplied_ingredients]
 
-    cnn = tf.keras.models.load_model(
-        'Custom_Image_Classification_Trained_Model.h5')
+    cnn = tf.keras.models.load_model('Custom_Image_Classification_Trained_Model.h5')
 
     input_folder = AIKitchen.config['UPLOAD_FOLDER']
     predictions_list = []

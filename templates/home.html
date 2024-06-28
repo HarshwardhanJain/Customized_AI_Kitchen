@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to AI Kitchen</h1>
+        <p class="lead">AI Kitchen is an innovative application that helps you identify ingredients from images and provides recipes based on selected dishes.</p>
+        <hr class="my-4">
+        <h3>Contributors:</h3>
+        <ul>
+            <li>Harshwardhan Jain (22CSU392)</li>
+            <li>Shefali Khera (22CSU426)</li>
+        </ul>
+        <h3>Overview:</h3>
+        <p>AI Kitchen simplifies the cooking process by leveraging AI technology. Users can select a dish, upload images of ingredients, and our application will classify the ingredients using a trained model. Based on the identified ingredients, AI Kitchen provides the corresponding recipe, making cooking easier and more efficient.</p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('index') }}" role="button">Get Started</a>
+    </div>
+{% endblock %}
