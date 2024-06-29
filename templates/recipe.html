@@ -7,11 +7,11 @@
         <div>{{ ingredients_table|safe }}</div>
 
         <h2 class="mb-4">Recipe Instructions</h2>
-        <ul>
+        <ol>
             {% for sentence in sentences %}
                 <li>{{ sentence }}</li>
             {% endfor %}
-        </ul>
+        </ol>
 
         <h2 class="mb-4">Images with Predictions</h2>
         <div class="image-grid">
