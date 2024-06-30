@@ -2,7 +2,9 @@
 
 {% block content %}
     <div class="jumbotron content-box">
-        <h1 class="display-4">Welcome to AI Kitchen</h1>
+        <div class="text-center">
+            <h1 class="display-4">Welcome to AI Kitchen</h1>
+        </div>
         <p class="lead">AI Kitchen is an innovative application that helps you identify ingredients from images and provides recipes based on selected dishes.</p>
         <hr class="my-4">
         <div>
@@ -14,7 +16,9 @@
             <h3>Overview:</h3>
             <p>AI Kitchen simplifies the cooking process by leveraging AI technology. Users can select a dish, upload images of ingredients, and our application will classify the ingredients using a trained model. Based on the identified ingredients, AI Kitchen provides the corresponding recipe, making cooking easier and more efficient.</p>
         </div>
-        <a class="btn btn-primary btn-lg" href="{{ url_for('index') }}" role="button">Get Started</a>
+        <div class="text-center">
+            <a class="btn btn-primary btn-lg" href="{{ url_for('index') }}" role="button">Get Started</a>
+        </div>
     </div>
 {% endblock %}
 
