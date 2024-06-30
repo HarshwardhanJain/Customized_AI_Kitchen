@@ -118,20 +118,32 @@ python AIKitchen.py
 Customized_AI_Kitchen/
 │
 ├── static/
-│   └── uploaded_images/
+│   ├── backgrounds/
+│   │   ├── background1.jpg
+│   │   ├── background2.jpg
+│   │   ├── background3.jpg
+│   │   ├── background4.jpg
+│   │   └── background5.jpg
+│   ├── uploaded_images/
+│   └── styles.css
 │
 ├── templates/
-│   ├── index.html
 │   ├── action.html
-│   ├── upload.html
-│   ├── recipe.html
-│   └── missing.html
+│   ├── base.html
+│   ├── display_images.html
+│   ├── home.html
+│   ├── index.html
+│   ├── missing.html
+│   └── recipe.html
+│   └── upload.html
 │
-├── Custom_Recipe_Dataset.csv
-├── Custom_Image_Classification_Trained_Model.h5
+├── .gitattributes
+├── .gitignore
 ├── AIKitchen.py
-├── requirements.txt
-└── README.md
+├── Custom_Image_Classification_Trained_Model.h5
+├── Custom_Recipe_Dataset.csv
+├── README.md
+└── requirements.txt
 ```
 
 ## Note
