@@ -83,6 +83,7 @@ pip uninstall -y numpy
 pip uninstall -y tensorflow
 pip uninstall -y Werkzeug
 pip uninstall -y matplotlib
+pip uninstall -y Flask-WTF
 ```
 
 ### Install Dependencies
