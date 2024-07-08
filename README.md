@@ -145,6 +145,7 @@ Customized_AI_Kitchen/
 ├── AIKitchen.py
 ├── Custom_Image_Classification_Trained_Model.h5
 ├── Custom_Recipe_Dataset.csv
+├── Intel Project Report.docx
 ├── README.md
 └── requirements.txt
 ```
