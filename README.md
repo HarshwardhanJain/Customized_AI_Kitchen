@@ -118,6 +118,8 @@ python AIKitchen.py
 ```
 Customized_AI_Kitchen/
 │
+├── Carrot And Cabbage Sambharo Images/
+│
 ├── static/
 │   ├── backgrounds/
 │   │   ├── background1.jpg
