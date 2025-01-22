@@ -159,3 +159,7 @@ Customized_AI_Kitchen/
 ## Tutorial Video
 * **Please follow the video closely.** <br>
 [Intel Project Running Tutorial](https://drive.google.com/file/d/18WfOoX_ytzkc6zq0cFqwlLoz1NJi2Vag/view?usp=drive_link)
+
+## Contributors
+* **Harshwardhan Jain**
+* **Shefali Khera**
