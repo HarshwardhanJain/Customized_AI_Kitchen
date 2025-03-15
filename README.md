@@ -68,6 +68,12 @@ This well-structured dataset ensures comprehensive coverage of each class, enabl
 
 ## Installation
 
+### Python Version  
+Ensure you are using **Python 3.11.4** only. You can check your version with:  
+```sh
+python --version
+```
+
 ### Clone the Repository
 ```sh
 git clone https://github.com/HarshwardhanJain/Customized_AI_Kitchen.git
